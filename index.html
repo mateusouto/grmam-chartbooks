@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chartbooks de macroeconomia</title>
+<style>
+:root { --bg: #ffffff; --fg: #1b2430; --muted: #5d6a79; --line: #dde3ea; --head: #021832; --accent: #17847B; --band: #f3f6f9; color-scheme: light; }
+@media (prefers-color-scheme: dark) { :root { --bg: #0f1722; --fg: #e4e9ef; --muted: #98a4b3; --line: #243040; --head: #e4e9ef; --accent: #4cc3b8; --band: #16202d; color-scheme: dark; } }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--fg); font: 15px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+main { max-width: 56rem; margin: 0 auto; padding: 2.5rem max(16px, env(safe-area-inset-right)) 3rem max(16px, env(safe-area-inset-left)); }
+h1 { margin: 0; color: var(--head); font-size: 1.7rem; letter-spacing: -0.01em; }
+.sub { margin: .25rem 0 2rem; color: var(--muted); }
+h2 { margin: 0 0 .6rem; color: var(--muted); font-size: .8rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; }
+a { color: var(--accent); text-decoration: none; font-weight: 600; }
+a:hover { text-decoration: underline; }
+.recentes { list-style: none; margin: 0 0 2.2rem; padding: 0; border-top: 1px solid var(--line); }
+.recentes li { display: flex; gap: .8rem; align-items: baseline; padding: .45rem 0; border-bottom: 1px solid var(--line); }
+.recentes .ref { color: var(--muted); font-variant-numeric: tabular-nums; }
+.recentes .data { margin-left: auto; color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.tabela { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; }
+th, td { padding: .5rem .6rem; text-align: left; border-bottom: 1px solid var(--line); white-space: nowrap; }
+th { background: var(--band); font-size: .8rem; font-weight: 600; color: var(--muted); }
+th button { all: unset; cursor: pointer; }
+th button:hover, th button:focus-visible { color: var(--fg); }
+th[aria-sort="ascending"] button::after { content: " \25B2"; font-size: .7em; }
+th[aria-sort="descending"] button::after { content: " \25BC"; font-size: .7em; }
+td.tema, td.ref, td.data { color: var(--muted); font-variant-numeric: tabular-nums; }
+footer { margin-top: 2rem; color: var(--muted); font-size: .8rem; }
+@media (max-width: 40rem) { td.data, th.data { display: none; } }
+</style>
+</head>
+<body>
+<main>
+<h1>Chartbooks de macroeconomia</h1>
+<p class="sub">Brasil e EUA. Sempre a divulgação mais recente de cada indicador.</p>
+<h2>Últimas atualizações</h2>
+<ol class="recentes">
+<li><a href="pnad.html">PNAD Contínua</a><span class="ref">set/26</span><span class="data">30/10/2026</span></li>
+<li><a href="setor_publico.html">Setor Público Consolidado</a><span class="ref">set/26</span><span class="data">29/10/2026</span></li>
+<li><a href="us_payroll.html">Payroll</a><span class="ref">set/26</span><span class="data">29/10/2026</span></li>
+<li><a href="credito.html">Crédito</a><span class="ref">set/26</span><span class="data">29/10/2026</span></li>
+<li><a href="governo_central.html">Governo Central</a><span class="ref">set/26</span><span class="data">29/10/2026</span></li>
+</ol>
+<h2>Todos os indicadores</h2>
+<div class="tabela">
+<table id="tabela">
+<thead><tr><th class="" data-col="tema" data-first="asc" aria-sort="ascending"><button type="button">Tema</button></th><th class="" data-col="indicador" data-first="asc" aria-sort="none"><button type="button">Indicador</button></th><th class="ref" data-col="referencia" data-first="desc" aria-sort="none"><button type="button">Referência</button></th><th class="data" data-col="atualizado" data-first="desc" aria-sort="none"><button type="button">Atualizado em</button></th></tr></thead>
+<tbody>
+<tr data-tema="00|ibc-br" data-indicador="ibc-br" data-referencia="2026-08-01" data-atualizado="2026-10-21T17:39"><td class="tema">Atividade</td><td><a href="ibcbr.html">IBC-Br</a></td><td class="ref">ago/26</td><td class="data">21/10/2026</td></tr>
+<tr data-tema="00|pesquisa mensal de comércio" data-indicador="pesquisa mensal de comércio" data-referencia="2026-08-01" data-atualizado="2026-10-20T16:05"><td class="tema">Atividade</td><td><a href="pmc.html">Pesquisa Mensal de Comércio</a></td><td class="ref">ago/26</td><td class="data">20/10/2026</td></tr>
+<tr data-tema="00|pesquisa mensal de serviços" data-indicador="pesquisa mensal de serviços" data-referencia="2026-08-01" data-atualizado="2026-10-20T16:02"><td class="tema">Atividade</td><td><a href="pms.html">Pesquisa Mensal de Serviços</a></td><td class="ref">ago/26</td><td class="data">20/10/2026</td></tr>
+<tr data-tema="00|produto interno bruto" data-indicador="produto interno bruto" data-referencia="2026-04-01" data-atualizado="2026-10-20T15:38"><td class="tema">Atividade</td><td><a href="pib.html">Produto Interno Bruto</a></td><td class="ref">2T26</td><td class="data">20/10/2026</td></tr>
+<tr data-tema="00|produção industrial" data-indicador="produção industrial" data-referencia="2026-08-01" data-atualizado="2026-10-20T15:48"><td class="tema">Atividade</td><td><a href="pim.html">Produção Industrial</a></td><td class="ref">ago/26</td><td class="data">20/10/2026</td></tr>
+<tr data-tema="01|ipca" data-indicador="ipca" data-referencia="2026-09-01" data-atualizado="2026-10-28T13:54"><td class="tema">Preços</td><td><a href="ipca.html">IPCA</a></td><td class="ref">set/26</td><td class="data">28/10/2026</td></tr>
+<tr data-tema="01|ipca-15" data-indicador="ipca-15" data-referencia="2026-10-01" data-atualizado="2026-10-23T09:05"><td class="tema">Preços</td><td><a href="ipca15.html">IPCA-15</a></td><td class="ref">out/26</td><td class="data">23/10/2026</td></tr>
+<tr data-tema="02|caged" data-indicador="caged" data-referencia="2026-08-01" data-atualizado="2026-10-26T09:50"><td class="tema">Mercado de trabalho</td><td><a href="caged.html">CAGED</a></td><td class="ref">ago/26</td><td class="data">26/10/2026</td></tr>
+<tr data-tema="02|caged microdados" data-indicador="caged microdados" data-referencia="2026-08-01" data-atualizado="2026-10-27T12:26"><td class="tema">Mercado de trabalho</td><td><a href="caged_micro.html">CAGED microdados</a></td><td class="ref">ago/26</td><td class="data">27/10/2026</td></tr>
+<tr data-tema="02|pnad contínua" data-indicador="pnad contínua" data-referencia="2026-09-01" data-atualizado="2026-10-30T09:07"><td class="tema">Mercado de trabalho</td><td><a href="pnad.html">PNAD Contínua</a></td><td class="ref">set/26</td><td class="data">30/10/2026</td></tr>
+<tr data-tema="03|balança comercial" data-indicador="balança comercial" data-referencia="2026-09-01" data-atualizado="2026-10-13T17:07"><td class="tema">Setor externo</td><td><a href="balanca_comercial.html">Balança Comercial</a></td><td class="ref">set/26</td><td class="data">13/10/2026</td></tr>
+<tr data-tema="03|balanço de pagamentos" data-indicador="balanço de pagamentos" data-referencia="2026-09-01" data-atualizado="2026-10-26T13:30"><td class="tema">Setor externo</td><td><a href="balanco_pagamentos.html">Balanço de Pagamentos</a></td><td class="ref">set/26</td><td class="data">26/10/2026</td></tr>
+<tr data-tema="03|fluxo cambial" data-indicador="fluxo cambial" data-referencia="2026-10-23" data-atualizado="2026-10-28T14:43"><td class="tema">Setor externo</td><td><a href="fluxo_cambial.html">Fluxo Cambial</a></td><td class="ref">23/out</td><td class="data">28/10/2026</td></tr>
+<tr data-tema="04|arrecadação federal" data-indicador="arrecadação federal" data-referencia="2026-09-01" data-atualizado="2026-10-22T12:47"><td class="tema">Fiscal e crédito</td><td><a href="arrecadacao.html">Arrecadação Federal</a></td><td class="ref">set/26</td><td class="data">22/10/2026</td></tr>
+<tr data-tema="04|crédito" data-indicador="crédito" data-referencia="2026-09-01" data-atualizado="2026-10-29T10:18"><td class="tema">Fiscal e crédito</td><td><a href="credito.html">Crédito</a></td><td class="ref">set/26</td><td class="data">29/10/2026</td></tr>
+<tr data-tema="04|governo central" data-indicador="governo central" data-referencia="2026-09-01" data-atualizado="2026-10-29T09:57"><td class="tema">Fiscal e crédito</td><td><a href="governo_central.html">Governo Central</a></td><td class="ref">set/26</td><td class="data">29/10/2026</td></tr>
+<tr data-tema="04|setor público consolidado" data-indicador="setor público consolidado" data-referencia="2026-09-01" data-atualizado="2026-10-29T14:37"><td class="tema">Fiscal e crédito</td><td><a href="setor_publico.html">Setor Público Consolidado</a></td><td class="ref">set/26</td><td class="data">29/10/2026</td></tr>
+<tr data-tema="05|focus top 5" data-indicador="focus top 5" data-referencia="2026-09-01" data-atualizado="2026-10-26T11:15"><td class="tema">Expectativas</td><td><a href="focus_top5.html">Focus Top 5</a></td><td class="ref">set/26</td><td class="data">26/10/2026</td></tr>
+<tr data-tema="05|prisma fiscal: podium" data-indicador="prisma fiscal: podium" data-referencia="2026-08-01" data-atualizado="2026-10-26T11:17"><td class="tema">Expectativas</td><td><a href="prisma_podium.html">Prisma Fiscal: Podium</a></td><td class="ref">ago/26</td><td class="data">26/10/2026</td></tr>
+<tr data-tema="06|cpi (eua)" data-indicador="cpi (eua)" data-referencia="2026-09-01" data-atualizado="2026-10-22T16:13"><td class="tema">EUA</td><td><a href="us_cpi.html">CPI (EUA)</a></td><td class="ref">set/26</td><td class="data">22/10/2026</td></tr>
+<tr data-tema="06|gdp (eua)" data-indicador="gdp (eua)" data-referencia="2026-07-01" data-atualizado="2026-10-29T09:50"><td class="tema">EUA</td><td><a href="us_gdp.html">GDP (EUA)</a></td><td class="ref">3T26</td><td class="data">29/10/2026</td></tr>
+<tr data-tema="06|jolts" data-indicador="jolts" data-referencia="2026-08-01" data-atualizado="2026-10-20T09:59"><td class="tema">EUA</td><td><a href="us_jolts.html">JOLTS</a></td><td class="ref">ago/26</td><td class="data">20/10/2026</td></tr>
+<tr data-tema="06|payroll" data-indicador="payroll" data-referencia="2026-09-01" data-atualizado="2026-10-29T12:51"><td class="tema">EUA</td><td><a href="us_payroll.html">Payroll</a></td><td class="ref">set/26</td><td class="data">29/10/2026</td></tr>
+<tr data-tema="06|pce (eua)" data-indicador="pce (eua)" data-referencia="2026-09-01" data-atualizado="2026-10-29T09:36"><td class="tema">EUA</td><td><a href="us_pce.html">PCE (EUA)</a></td><td class="ref">set/26</td><td class="data">29/10/2026</td></tr>
+<tr data-tema="06|ppi (eua)" data-indicador="ppi (eua)" data-referencia="2026-09-01" data-atualizado="2026-10-22T16:29"><td class="tema">EUA</td><td><a href="us_ppi.html">PPI (EUA)</a></td><td class="ref">set/26</td><td class="data">22/10/2026</td></tr>
+</tbody>
+</table>
+</div>
+<footer>Elaboração: Petros. Índice gerado em 30/10/2026 09:07.</footer>
+</main>
+<script>
+(function () {
+  var table = document.getElementById('tabela');
+  var body = table.tBodies[0];
+  var headers = table.querySelectorAll('th');
+
+  function sortBy(column, direction) {
+    var rows = Array.prototype.slice.call(body.rows);
+
+    rows.sort(function (a, b) {
+      return direction * a.dataset[column].localeCompare(b.dataset[column], 'pt');
+    });
+
+    rows.forEach(function (row) { body.appendChild(row); });
+    headers.forEach(function (th) { th.setAttribute('aria-sort', th.dataset.col === column ? (direction === 1 ? 'ascending' : 'descending') : 'none'); });
+  }
+
+  headers.forEach(function (th) {
+    th.querySelector('button').addEventListener('click', function () {
+      var current = th.getAttribute('aria-sort');
+      var first = th.dataset.first === 'desc' ? -1 : 1;  // datas: o primeiro clique traz o mais recente
+      sortBy(th.dataset.col, current === 'none' ? first : (current === 'ascending' ? -1 : 1));
+    });
+  });
+})();
+</script>
+</body>
+</html>
